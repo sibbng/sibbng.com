@@ -1,0 +1,18 @@
+shared:
+  active: "#0099FF"
+  
+dark:
+  primary: "#111111"
+  on-primary: "#B4B4B4"
+  on-primary-active: "#F2F2F2"
+  frame: "#1E1E1E"
+  on-frame: "#808080"
+  on-frame-active: "--on-primary"
+
+light:
+  primary: "#FFFFFF"
+  on-primary: "#888888"
+  on-primary-active: "#333333"
+  frame: "#EFEFEF"
+  on-frame: "#808080"
+  on-frame-active: "--on-primary"

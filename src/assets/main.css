@@ -1,0 +1,85 @@
+/* [data-theme="dark"], [data-theme="light"] {
+  --active: #0099FF;
+}
+
+[data-theme="dark"] {
+  --primary: #111111;
+  --on-primary: #B4B4B4;
+  --on-primary-active: #F2F2F2;
+  --frame: #1E1E1E;
+  --on-frame: #808080;
+}
+[data-theme="light"] {
+  --primary: #FFFFFF;
+  --on-primary: #888888;
+  --on-primary-active: #333333;
+  --frame: #EFEFEF;
+  --on-frame: #808080;
+} */
+
+html {
+  @apply min-w-full min-h-full;
+}
+
+html[data-theme="dark"] {
+  background: linear-gradient(140deg, #111111 0%, #1E1E1E 51%);
+}
+html[data-theme="light"] {
+  background: linear-gradient(140deg, #FFFFFF 0%, #EEEEEE 51%);
+}
+
+@keyframes logo {
+  0% {
+    opacity: 0%;
+    transform: scale(0.9);
+  }
+  80% {
+    opacity: 100%;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.homeicon {
+  animation-name: logo;
+  animation-timing-function: ease-in-out;
+  animation-duration: .5s;
+}
+
+.duration-0 {
+  transition-duration: 0ms;
+}
+
+/* purgecss ignore */
+:focus::-webkit-input-placeholder,
+::-webkit-input-placeholder {
+  @apply transition-all duration-200;
+}
+
+/* purgecss ignore */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    opacity: 1;
+    background-color: var(--primary)
+}
+
+/* purgecss ignore */
+::-webkit-scrollbar-thumb {
+    background-color: var(--on-frame);
+    @apply rounded-full;
+}
+
+/* purgecss ignore */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  color: transparent;
+  background: transparent;
+}
